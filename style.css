@@ -1,10 +1,12 @@
 :root {
-  --paper: #f7f6ef;
-  --surface: #fffef8;
-  --ink: #213e39;
-  --muted: #586962;
-  --accent: #255c46;
-  --line: #ccd3c6;
+  --paper: #e6dfd5;
+  --surface: #f0e9df;
+  --ink: #342c2a;
+  --muted: #635751;
+  --accent: #6b202b;
+  --maroon: #500000;
+  --header-text: #fff4e5;
+  --line: #c8b9aa;
   --radius: 6px;
 }
 
@@ -48,7 +50,15 @@ main {
   padding-bottom: 64px;
 }
 
-.site-header { border-bottom: 1px solid var(--line); }
+.site-header {
+  background: var(--maroon);
+  border-bottom: 1px solid #814d48;
+}
+.site-header .site-name,
+.site-header nav a { color: var(--header-text); }
+.site-header :focus-visible,
+.hero :focus-visible,
+.page-heading :focus-visible { outline-color: #f0cc8a; }
 
 .header-inner,
 .footer-inner {
@@ -96,7 +106,30 @@ nav a[aria-current="page"] {
 .skip-link:focus { top: 12px; }
 
 .hero,
-.page-heading { padding-block: 72px 44px; }
+.page-heading {
+  padding-block: 60px 48px;
+  margin-bottom: 40px;
+  background: var(--maroon);
+  color: var(--header-text);
+  box-shadow: 0 0 0 100vmax var(--maroon);
+  clip-path: inset(0 -100vmax);
+}
+.hero .eyebrow,
+.page-heading .eyebrow,
+.hero .headline,
+.page-heading .lead { color: #e4c9bd; }
+.page-heading a { color: var(--header-text); }
+.hero .button,
+.page-heading .button {
+  background: var(--header-text);
+  color: var(--maroon);
+  border-color: var(--header-text);
+}
+.hero .button:hover,
+.page-heading .button:hover {
+  background: #e4c9bd;
+  color: var(--maroon);
+}
 
 .eyebrow {
   margin: 0 0 16px;
@@ -285,6 +318,7 @@ th { background: var(--surface); }
 .resume-entry ul { padding-left: 22px; }
 
 .site-footer {
+  background: #dcd1c4;
   border-top: 1px solid var(--line);
   color: var(--muted);
   font-size: 14px;
@@ -330,4 +364,11 @@ th { background: var(--surface); }
   .project-card, .resume-entry, figure { break-inside: avoid; }
   a { color: black; }
   .map, #map, iframe { display: none; }
+  .site-header, .site-footer { background: white; }
+  .site-header .site-name { color: black; }
+  .hero, .page-heading {
+    background: white; color: black; box-shadow: none; clip-path: none;
+  }
+  .hero .eyebrow, .page-heading .eyebrow,
+  .hero .headline, .page-heading .lead, .page-heading a { color: black; }
 }
