@@ -1,72 +1,103 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="color-scheme" content="light">
-<title>[ADD] — Personal portfolio</title>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<style>
-:root{--ink:#213e39;--paper:#f7f6ef;--muted:#586962;--line:#ccd3c6;--accent:#255c46}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.65 system-ui,sans-serif}a{color:inherit;text-underline-offset:5px}a:hover{color:var(--accent)}:focus-visible{outline:3px solid #a56527;outline-offset:5px}.wrap{max-width:1120px;margin:auto;padding:0 32px}.nav{display:flex;justify-content:space-between;gap:20px;align-items:center;padding-block:23px;border-bottom:1px solid var(--line)}.brand,.eyebrow{font:12px/1.5 system-ui,sans-serif;letter-spacing:.16em;text-transform:uppercase}.brand{text-decoration:none;font-weight:700}nav{display:flex;gap:24px;flex-wrap:wrap;font-size:14px}nav a{text-decoration:none}header{padding:90px 0 76px}h1,h2,h3,p{margin:0}h1,h2{font-family:Georgia,serif;font-weight:400;line-height:1.12;letter-spacing:-.045em}h1{font-size:clamp(60px,10vw,112px);margin:22px 0}h2{font-size:clamp(34px,5vw,48px)}h3{font-size:22px;font-weight:500;line-height:1.3}.headline{font-size:clamp(20px,3vw,28px);max-width:780px;color:var(--muted)}.button{display:inline-block;margin-top:30px;padding:10px 21px;border:1px solid var(--ink);border-radius:2px;text-decoration:none;font-size:14px}.button:hover{background:var(--ink);color:var(--paper)}section{padding:52px 0;border-top:1px solid var(--line)}.split{display:grid;grid-template-columns:1fr 2fr;gap:55px}.copy{max-width:720px}.label{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:14px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:30px}.hint{font-size:14px;color:var(--muted)}.projects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:start}details{border:1px solid var(--line);border-radius:5px;background:#fffef8;overflow:hidden}summary{cursor:pointer;padding:24px;list-style:none}summary::-webkit-details-marker{display:none}.card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:38px}.number{font:12px monospace;color:var(--muted)}.plus{font-size:24px;line-height:1}details[open] .plus{transform:rotate(45deg)}summary h3{margin-bottom:16px}.open-label{font-size:12px;color:var(--muted)}.case{padding:0 24px 24px;border-top:1px solid var(--line)}.case h4{font-size:14px;margin:22px 0 5px}.case p{font-size:15px;color:var(--muted)}.map{height:320px;margin-top:20px;border:1px solid var(--line);border-radius:3px}.map:focus-visible{outline-offset:2px}iframe{display:block;width:100%;height:430px;border:1px solid var(--line);margin-top:20px}.status{margin-top:18px;font-size:13px!important}.resume{display:grid;grid-template-columns:1fr 1fr;gap:28px}.resume h3{font-size:17px;margin-bottom:8px}.email{font:clamp(27px,5vw,48px)/1.4 Georgia,serif;overflow-wrap:anywhere}footer{border-top:1px solid var(--line);padding:22px 0 30px;color:var(--muted);font-size:12px}footer .wrap{display:flex;justify-content:space-between;gap:16px}.skip{position:absolute;top:-80px;left:15px;background:var(--paper);padding:8px;z-index:9999}.skip:focus{top:10px}@media(max-width:720px){.wrap{padding-inline:22px}.nav{align-items:start}.brand{max-width:100px}nav{gap:10px 17px;justify-content:flex-end}header{padding:60px 0}.split,.projects{grid-template-columns:1fr;gap:26px}.section-head{display:block}.hint{margin-top:15px}section{padding:38px 0}.card-top{margin-bottom:24px}.resume{grid-template-columns:1fr}.map{height:280px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+        content="Brodde M. Stanford's portfolio of GIS research, environmental data assessment, and field experience.">
+  <title>Brodde M. Stanford | Home</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body id="top">
-<a class="skip" href="#main">Skip to content</a>
-<div class="wrap nav"><a class="brand" href="#top">[ADD]</a><nav aria-label="Main navigation"><a href="#about">About</a><a href="#projects">Projects</a><a href="#resume">Resume</a><a href="#contact">Contact</a></nav></div>
-<main class="wrap" id="main">
-<header><p class="eyebrow">Personal portfolio</p><h1>[ADD]</h1><p class="headline">[ADD]</p><a class="button" href="#projects">Explore projects <span aria-hidden="true">↗</span></a></header>
-<section class="split" id="about"><div><span class="label">Introduction</span><h2>About</h2></div><p class="copy">[ADD]</p></section>
-<section id="projects">
-<div class="section-head"><div><span class="label">A closer look</span><h2>Projects</h2></div><p class="hint">Select a project to explore the process.</p></div>
-<div class="projects">
-<details data-project="0"><summary><div class="card-top"><span class="number">01 / PROJECT</span><span class="plus" aria-hidden="true">+</span></div><h3>[ADD]</h3><span class="open-label">View project</span></summary><div class="case"><h4>The problem</h4><p>[ADD]</p><h4>What I did</h4><p>[ADD]</p><h4>What I found</h4><p>[ADD]</p><h4>What I would do differently</h4><p>[ADD]</p><div class="media"></div></div></details>
-<details data-project="1"><summary><div class="card-top"><span class="number">02 / PROJECT</span><span class="plus" aria-hidden="true">+</span></div><h3>[ADD]</h3><span class="open-label">View project</span></summary><div class="case"><h4>The problem</h4><p>[ADD]</p><h4>What I did</h4><p>[ADD]</p><h4>What I found</h4><p>[ADD]</p><h4>What I would do differently</h4><p>[ADD]</p><div class="media"></div></div></details>
-<details data-project="2"><summary><div class="card-top"><span class="number">03 / PROJECT</span><span class="plus" aria-hidden="true">+</span></div><h3>[ADD]</h3><span class="open-label">View project</span></summary><div class="case"><h4>The problem</h4><p>[ADD]</p><h4>What I did</h4><p>[ADD]</p><h4>What I found</h4><p>[ADD]</p><h4>What I would do differently</h4><p>[ADD]</p><div class="media"></div></div></details>
-</div>
-</section>
-<section class="split" id="resume"><div><span class="label">Background</span><h2>Resume</h2></div><div class="resume"><div><h3>Experience</h3><p>[ADD]</p></div><div><h3>Education</h3><p>[ADD]</p></div><div><h3>Skills</h3><p>[ADD]</p></div><div><h3>Additional information</h3><p>[ADD]</p></div></div></section>
-<section class="split" id="contact"><div><span class="label">Get in touch</span><h2>Contact</h2></div><div><!-- Replace BOTH [ADD] values with your supplied email address. --><a class="email" href="mailto:[ADD]">[ADD]</a></div></section>
-</main>
-<footer><div class="wrap"><span>[ADD] · Personal portfolio</span><a href="#top">Back to top ↑</a></div></footer>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script>
-// Only add facts from supplied files. No map points or ArcGIS URLs were supplied.
-// For each project, points accepts {lat: number, lng: number, popup: "supplied text"}.
-// Replace embedUrl with a supplied ArcGIS Online map or StoryMap embed URL.
-const projectData = [
-  {points: [], embedUrl: "[ADD]"},
-  {points: [], embedUrl: "[ADD]"},
-  {points: [], embedUrl: "[ADD]"}
-];
-document.querySelectorAll('details[data-project]').forEach(card => {
-  let map, initialized = false;
-  card.addEventListener('toggle', () => {
-    if (!card.open) return;
-    if (initialized) { if(map) requestAnimationFrame(() => map.invalidateSize()); return; }
-    initialized = true;
-    const data = projectData[Number(card.dataset.project)], host = card.querySelector('.media');
-    const status = message => { const p=document.createElement('p'); p.className='status'; p.textContent=message; host.append(p); };
-    if (data.points.length) {
-      if (!window.L) status('The map could not load. Check your internet connection and reload.');
-      else {
-        const box=document.createElement('div'); box.className='map'; box.setAttribute('aria-label','Interactive project map'); host.append(box);
-        map=L.map(box,{scrollWheelZoom:false});
-        // Esri tile order is zoom / row (y) / column (x).
-        const tiles=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}',{attribution:'Tiles © Esri',maxZoom:19}).addTo(map);
-        let warned=false; tiles.on('tileerror',()=>{if(!warned){warned=true;status('Basemap tiles could not load. Check your internet connection.');}});
-        const markers=data.points.map(point=>{
-          const popup=document.createElement('div'); popup.textContent=point.popup || '[ADD]';
-          return L.marker([point.lat,point.lng]).bindPopup(popup).addTo(map);
-        });
-        map.fitBounds(L.featureGroup(markers).getBounds(),{padding:[25,25],maxZoom:14});
-        requestAnimationFrame(()=>map.invalidateSize());
-      }
-    }
-    if(data.embedUrl && data.embedUrl!=='[ADD]') {
-      const frame=document.createElement('iframe'); frame.src=data.embedUrl; frame.title='Project '+(Number(card.dataset.project)+1)+' — ArcGIS map or StoryMap'; frame.loading='lazy'; frame.allowFullscreen=true; host.append(frame);
-    }
-  });
-});
-</script>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-name" href="index.html">Brodde M. Stanford</a>
+      <nav aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="main">
+    <section class="hero" aria-labelledby="home-title">
+      <p class="eyebrow">Personal portfolio</p>
+      <h1 id="home-title">Brodde M. Stanford</h1>
+      <p class="headline">
+        Pursuing an entry-level land surveying position,
+        with experience in field observation, equipment
+        troubleshooting, and documentation.
+      </p>
+      <a class="button" href="projects.html">Explore my work</a>
+    </section>
+
+    <section aria-labelledby="featured-title">
+      <p class="eyebrow">Featured project · New_NWSW</p>
+      <article class="featured">
+        <h2 id="featured-title">
+          Environmental spatial context and data comparability
+        </h2>
+        <p class="lead">
+          Assessing environmental datasets to understand what
+          comparisons they support—and where uncertainty remains.
+        </p>
+        <p>
+          My contribution examined environmental conditions,
+          alternative explanations, and information gaps using
+          data from NASA POWER, NOAA, and Guatemala’s INSIVUMEH.
+          The work included environmental data collection and
+          preparation, checks on data comparability, and
+          interpretation of descriptive results.
+        </p>
+        <p>
+          For September 2026, the sampled Texas grid centres had
+          a higher median temperature and lower median relative
+          humidity than the sampled centres in Mexico and Guatemala.
+          These results describe the selected grid estimates,
+          not regional area averages or conditions at detection sites.
+          They do not establish a transmission mechanism or risk ranking.
+        </p>
+        <p class="note">
+          Contribution: Brodde Stanford. Source compilation,
+          metadata joins, and contextual guidance: Brandon Santor.
+          Scripts, checks, and draft interpretation were prepared
+          with Codex assistance.
+        </p>
+        <a class="project-link" href="project-1.html">
+          Read the full project →
+        </a>
+      </article>
+    </section>
+
+    <section class="split" aria-labelledby="background-title">
+      <h2 id="background-title">Field experience and GIS</h2>
+      <div class="prose">
+        <p>
+          I study Geographic Information Science &amp; Technology
+          at Texas A&amp;M University. My experience includes field
+          equipment maintenance and troubleshooting, drilling
+          documentation, and geological sample analysis.
+        </p>
+        <p>
+          I have used ArcGIS Field Maps and ArcGIS Pro in field
+          geography and advanced GIS courses.
+        </p>
+        <a class="project-link" href="about.html">More about me →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Brodde M. Stanford</p>
+      <a href="mailto:broddestanford@gmail.com">
+        broddestanford@gmail.com
+      </a>
+    </div>
+  </footer>
 </body>
 </html>

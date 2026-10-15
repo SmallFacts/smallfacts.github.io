@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+        content="Brodde Stanford's New_NWSW contribution: environmental data preparation, comparability checks, findings, and reflection.">
+  <title>Environmental Data Project | Brodde M. Stanford</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-name" href="index.html">Brodde M. Stanford</a>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html" aria-current="page">Projects</a>
+        <a href="resume.html">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="main">
+    <header class="page-heading">
+      <p class="eyebrow">New_NWSW · Project study</p>
+      <h1>Environmental spatial context and data comparability</h1>
+      <p class="lead">
+        Assessing what environmental datasets can tell us about
+        conditions relevant to New World screwworm research,
+        while keeping descriptive findings separate from
+        explanations of spread.
+      </p>
+    </header>
+
+    <dl class="project-meta">
+      <div>
+        <dt>Contributor</dt>
+        <dd>Brodde Stanford</dd>
+      </div>
+      <div>
+        <dt>Workstream</dt>
+        <dd>Environmental spatial context and data comparability</dd>
+      </div>
+      <div>
+        <dt>Featured analysis period</dt>
+        <dd>September 1–30, 2026</dd>
+      </div>
+    </dl>
+
+    <div class="prose">
+      <section aria-labelledby="problem-title">
+        <h2 id="problem-title">The problem</h2>
+        <p>
+          The project asks which environmental conditions could
+          influence transmission, what alternative explanations
+          exist, and what additional information would reduce
+          uncertainty.
+        </p>
+        <p>
+          A central challenge is deciding whether environmental
+          sources describe comparable locations, reporting periods,
+          and measurements. Regional summaries alone cannot
+          establish conditions at detection sites or explain
+          screwworm movement.
+        </p>
+      </section>
+
+      <section aria-labelledby="role-title">
+        <h2 id="role-title">My role</h2>
+        <p>
+          My contribution focused on environmental data collection
+          and preparation, source comparability, and interpretation
+          of descriptive comparisons. I assessed the strength of the
+          findings, considered geographic differences as a possible
+          explanation, and identified information gaps.
+        </p>
+        <p class="note">
+          Brandon Santor provided source compilation, metadata joins,
+          and contextual guidance. Ethan DeMelo contributed earlier
+          technical intake. Codex assisted with scripts, checks,
+          and draft interpretation; I was the submitting researcher.
+        </p>
+      </section>
+
+      <section aria-labelledby="method-title">
+        <h2 id="method-title">The data and method</h2>
+
+        <h3>NASA POWER environmental estimates</h3>
+        <p>
+          The analysis used retained daily NASA POWER estimates
+          for sampled grid centres in Guatemala, Mexico, and Texas.
+          Temperature and relative humidity were summarized as
+          arithmetic means of daily values at each centre.
+          Daily precipitation rates were multiplied by a one-day
+          duration and summed over the stated period.
+        </p>
+        <p>
+          September summaries used 30 distinct valid dates per
+          group. Separate October summaries covered October 1–3
+          only and were not treated as a complete month.
+          Missing source values were kept distinct from zero.
+        </p>
+        <p>
+          The documented checks compared daily inputs with original
+          JSON records, including coordinates, dates, units, and
+          source pointers. Aggregates were reconstructed from the
+          retained values. These checks assessed processing
+          consistency; they did not independently validate
+          actual weather.
+        </p>
+
+        <h3>Station data usability</h3>
+        <p>
+          The contribution also assessed NOAA SSOD precipitation
+          records and a Guatemala station metadata addendum.
+          Partial reporting intervals, missing records, unmatched
+          station codes, and conflicting metadata were retained
+          as limitations rather than resolved by guessing.
+        </p>
+        <p>
+          The NOAA review found no eligible full-day or monthly
+          precipitation totals in the assessed records. The
+          Guatemala metadata checks did not resolve observation
+          timing, physical datum, or station relocation questions.
+        </p>
+      </section>
+
+      <section aria-labelledby="figure-title">
+        <h2 id="figure-title">September comparison</h2>
+
+        <figure>
+          <svg viewBox="0 0 540 260"
+               role="img"
+               aria-labelledby="chart-title chart-description">
+            <title id="chart-title">
+              Median of sampled grid-centre temperature means
+            </title>
+            <desc id="chart-description">
+              For September 1–30, 2026: Guatemala, 25.12 degrees
+              Celsius; Mexico, 25.65; Texas, 29.45.
+              Values are medians of sampled centre means,
+              not regional area averages.
+            </desc>
+
+            <g font-family="system-ui, sans-serif"
+               font-size="20" fill="#213e39">
+              <text x="10" y="28">Temperature (°C)</text>
+
+              <text x="10" y="80">Guatemala</text>
+              <text x="10" y="135">Mexico</text>
+              <text x="10" y="190">Texas</text>
+
+              <g fill="#255c46">
+                <rect x="150" y="58" width="226.08" height="28"/>
+                <rect x="150" y="113" width="230.85" height="28"/>
+                <rect x="150" y="168" width="265.05" height="28"/>
+              </g>
+
+              <text x="386" y="80">25.12</text>
+              <text x="391" y="135">25.65</text>
+              <text x="425" y="190">29.45</text>
+
+              <path d="M150 210H465"
+                    fill="none" stroke="#586962"/>
+              <g fill="#586962" font-size="18"
+                 text-anchor="middle">
+                <text x="150" y="238">0</text>
+                <text x="240" y="238">10</text>
+                <text x="330" y="238">20</text>
+                <text x="420" y="238">30</text>
+              </g>
+            </g>
+          </svg>
+
+          <figcaption>
+            Figure 1. Median of individual sampled grid-centre
+            temperature means, September 1–30, 2026.
+            Source: the New_NWSW v07 environmental review report.
+            These are selected grid estimates, not station
+            measurements or detection-site conditions.
+          </figcaption>
+        </figure>
+
+        <div class="table-wrap">
+          <table>
+            <caption>
+              September sampled-centre summaries
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Context</th>
+                <th scope="col">Centres</th>
+                <th scope="col">
+                  Median temperature mean (°C)
+                </th>
+                <th scope="col">
+                  Median relative-humidity mean (%)
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Guatemala</th>
+                <td>30</td>
+                <td>25.12</td>
+                <td>85.13</td>
+              </tr>
+              <tr>
+                <th scope="row">Mexico</th>
+                <td>560</td>
+                <td>25.65</td>
+                <td>71.51</td>
+              </tr>
+              <tr>
+                <th scope="row">Texas</th>
+                <td>202</td>
+                <td>29.45</td>
+                <td>56.53</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section aria-labelledby="findings-title">
+        <h2 id="findings-title">What I found</h2>
+        <p>
+          The sampled Texas grid centres had a higher median
+          temperature and lower median relative humidity in
+          September than the sampled centres in Mexico and Guatemala.
+        </p>
+        <p>
+          The temperature ranges overlapped. This supports a
+          qualified finding about the medians, rather than a claim
+          that every sampled Texas centre was warmer.
+          These summaries are not regional area averages and do
+          not establish a biological threshold, transmission
+          mechanism, or risk ranking.
+        </p>
+        <p>
+          The October results covered only three days. Comparing
+          them with a complete September month would not provide
+          a comparison of equivalent reporting periods.
+        </p>
+      </section>
+
+      <section aria-labelledby="reflection-title">
+        <h2 id="reflection-title">What I would do differently</h2>
+        <p>
+          I would prioritize detection-event records with precise
+          locations and clearly defined dates before assessing
+          whether the regional environmental patterns represent
+          conditions associated with detections.
+        </p>
+        <p>
+          My second priority would be elevation and climate records
+          linked to the sampled centres, to examine geographic
+          differences as a possible explanation for the temperature
+          patterns.
+        </p>
+        <p>
+          If environmental estimates matched to detection locations
+          showed a different pattern, I would revise my interpretation
+          of the regional findings’ relevance to screwworm movement.
+          The original sampled regional description could remain
+          valid while being less representative of detection
+          locations.
+        </p>
+        <p class="note">
+          These are proposed next steps. This contribution did not
+          perform event-weather matching or a causal test.
+          A descriptive association would not, by itself, prove
+          that weather caused spread.
+        </p>
+      </section>
+
+      <section aria-labelledby="sources-title">
+        <h2 id="sources-title">Source record</h2>
+        <p>
+          This page draws on my New_NWSW v07 environmental review
+          report and my written assessments for Questions 3 and 4.
+          Environmental sources in the project include NASA POWER,
+          NOAA SSOD, and INSIVUMEH.
+        </p>
+        <a class="project-link" href="projects.html">
+          ← Back to projects
+        </a>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Brodde M. Stanford</p>
+      <a href="mailto:broddestanford@gmail.com">
+        broddestanford@gmail.com
+      </a>
+    </div>
+  </footer>
+</body>
+</html>
