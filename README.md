@@ -1,1 +1,1 @@
-# SmallFacts.github.io
+# smallfacts.github.io
