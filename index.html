@@ -7,6 +7,19 @@
         content="Brodde Stanford's portfolio of GIS research, environmental data assessment, and field experience.">
   <title>Brodde Stanford | Home</title>
   <link rel="stylesheet" href="style.css?v=maroon-1">
+  <style>
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px 20px;
+    }
+
+    .hero-actions a[href^="mailto:"] {
+      color: var(--header-text);
+      font-weight: 600;
+    }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -32,7 +45,10 @@
         with experience in field observation, equipment
         troubleshooting, and documentation.
       </p>
-      <a class="button" href="projects.html">Explore my work</a>
+      <div class="hero-actions">
+        <a class="button" href="projects.html">Explore my work</a>
+        <a href="mailto:broddestanford@gmail.com">broddestanford@gmail.com</a>
+      </div>
     </section>
 
     <section aria-labelledby="aggie-park-title">
