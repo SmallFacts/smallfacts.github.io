@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aggie Park | Brodde Stanford</title>
+  <link rel="stylesheet" href="style.css?v=maroon-1">
+  <style>
+    .aggie-map { max-width: 680px; }
+
+    .aggie-map-crop {
+      display: block;
+      position: relative;
+      aspect-ratio: 680 / 800;
+      overflow: hidden;
+      border-radius: var(--radius);
+    }
+
+    /* Show pixels (970, 203) through (1650, 1003) of the original image. */
+    .aggie-map-crop img {
+      position: absolute;
+      width: 263.67647%;
+      max-width: none;
+      left: -142.64706%;
+      top: -25.375%;
+    }
+
+    .aggie-map-key {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 20px;
+      padding: 0;
+      margin: 0 0 14px;
+      list-style: none;
+    }
+
+    .aggie-map-key li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .aggie-map-symbol {
+      position: relative;
+      flex: 0 0 20px;
+      height: 20px;
+    }
+
+    .aggie-map-symbol--lights,
+    .aggie-map-symbol--trash {
+      border-radius: 50%;
+    }
+
+    .aggie-map-symbol--lights { background: #616268; }
+
+    .aggie-map-symbol--lights::before {
+      content: "";
+      position: absolute;
+      inset: 4px 6px;
+      background: white;
+      clip-path: polygon(53% 0, 100% 0, 62% 39%, 93% 39%, 26% 100%, 42% 55%, 5% 55%);
+    }
+
+    .aggie-map-symbol--trash { background: #3f8245; }
+
+    .aggie-map-symbol--trash::before {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 7px;
+      width: 6px;
+      height: 8px;
+      border: 1px solid white;
+      border-top-width: 2px;
+      border-radius: 0 0 2px 2px;
+    }
+
+    .aggie-map-symbol--sidewalk {
+      height: 0;
+      border-top: 3px solid #8d3c9d;
+    }
+
+    .aggie-map-symbol--water {
+      height: 13px;
+      border: 1px solid #172b40;
+      background: #6699cc;
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-name" href="index.html">Brodde Stanford</a>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="main">
+    <header class="page-heading">
+      <h1>Aggie Park</h1>
+    </header>
+
+    <div class="prose">
+      <p>In one of my courses, I had to map the lights and trash cans, the sidewalks, and a polygon for the water areas at Aggie Park. I did all the features in person. I walked the park and logged the location on Field Maps.</p>
+      <figure class="aggie-map">
+        <ul class="aggie-map-key" role="list">
+          <li><span class="aggie-map-symbol aggie-map-symbol--lights" aria-hidden="true"></span>Lights</li>
+          <li><span class="aggie-map-symbol aggie-map-symbol--trash" aria-hidden="true"></span>Trash cans</li>
+          <li><span class="aggie-map-symbol aggie-map-symbol--sidewalk" aria-hidden="true"></span>Sidewalks</li>
+          <li><span class="aggie-map-symbol aggie-map-symbol--water" aria-hidden="true"></span>Water areas</li>
+        </ul>
+        <a class="aggie-map-crop" href="aggie-park-field-maps.png">
+          <img src="aggie-park-field-maps.png" width="1793" height="1059"
+               alt="Lights and trash cans, the sidewalks, and a polygon for the water areas at Aggie Park">
+        </a>
+      </figure>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Brodde Stanford</p>
+      <a href="mailto:broddestanford@gmail.com">broddestanford@gmail.com</a>
+    </div>
+  </footer>
+</body>
+</html>
